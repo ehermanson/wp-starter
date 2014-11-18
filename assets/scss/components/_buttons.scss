@@ -1,0 +1,52 @@
+// Button Styles
+//==============================================================
+
+.button {
+  display:inline-block;
+  vertical-align: middle;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-color: $button-color;
+  color:$white;
+  border: 0;
+  outline:0;
+  padding: 10px 15px;
+  border-radius:$border-radius;
+  letter-spacing:2px;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-align: center;
+  cursor:pointer;
+  &:hover {
+    background-color: $button-darker;
+    color:$white;
+  }
+}
+
+.button-light {
+  @extend .button;
+  border:2px solid;
+  color:$button-color;
+  border-color:$button-color;
+  background-color:transparent;
+  &:hover, &:active {
+    background-color:$button-color;
+    color:$white;
+  }
+}
+
+
+// Modifiers
+
+.button-lg {
+  font-size:1.5em;
+}
+
+.button-xl {
+  font-size:2em;
+}
+
+
+.button-full {
+  display:block;
+  width:100%;
+}

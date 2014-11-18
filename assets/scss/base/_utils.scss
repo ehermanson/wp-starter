@@ -1,0 +1,48 @@
+
+// WP Specific Alignment
+// ---------------------
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+// -----------------------------------------------------------------------
+
+.screen-readers {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Extends .screen-readers to allow the element to be focusable
+// when navigated to via the keyboard: h5bp.com/p
+// -----------------------------------------------------------------------
+
+.screen-readers.focusable:active,
+.screen-readers.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}

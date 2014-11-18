@@ -1,0 +1,20 @@
+.widget {
+	margin-bottom:$spacing-unit;
+	background-color:$gray-lightest;
+	padding:20px;
+	
+	> ul {
+		list-style:none;
+		padding:0;
+
+		> li {
+			padding:5px 0;
+		}
+
+	}
+
+	> *:last-child { 
+		margin-bottom:0; /// Remove the bottom margin from the last element inside a widget area
+	}
+
+}

@@ -1,0 +1,5 @@
+.page-header {
+	@extend %full;
+	@include clearfix;
+	padding:15px 0;
+}

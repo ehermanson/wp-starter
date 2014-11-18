@@ -1,0 +1,42 @@
+
+%block {
+  @include container(1200px); 
+  @include clearfix;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+%full {
+	@include full;;
+}
+
+%half {
+	@include span(12);
+	
+	@include bp(sm){
+		@include span(6 of 12);
+	}
+}
+
+.page-wrap, .block {
+  @extend %block;
+}
+
+.main {	
+	margin-bottom:$spacing-unit;
+	@include bp(md){
+		@include span(8);
+	}
+}
+
+.sidebar {
+	@include bp(md) {
+		@include span(4);
+		@include last;
+	}
+}
+
+// 12 Columns
+.full {
+	@extend %full;
+}

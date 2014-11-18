@@ -1,0 +1,42 @@
+
+// Form Inputs & Elements
+//==============================================================
+
+// Prevent zoom on iOS
+select, input {
+	font-size:16px;
+}
+
+textarea {
+  resize: vertical;
+  display:block;
+}
+
+label {
+	display:block;
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="search"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="number"],
+textarea {
+	max-width:100%;
+	padding:2px 5px;
+	background-color:$white;
+	border:1px solid $gray-light;
+	border-radius:$border-radius;
+	transition:$transition;
+	-webkit-appearance: none;
+	&:focus {
+		outline:0;
+		border-color:$main;
+	}
+}
+
+::placeholder {
+	color:$gray-light;
+}

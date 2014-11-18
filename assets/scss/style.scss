@@ -1,0 +1,38 @@
+/*
+Theme Name: WordPress Starter
+Theme URI: ....
+Description: WordPress Starter Theme using SCSS, SUSY, & Gulp
+Author: Eric Hermanson
+Author URI:  http://ericrhermanson.com
+Version: 1.0
+License:     GNU General Public License 
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+
+@import "susy";
+@import "base/settings";
+@import "base/normalize";
+@import "base/mixins";
+@import "base/utils";
+@import "base/global";
+@import "base/typography";
+
+@import "vendor/font-awesome";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/page-header";
+
+@import "components/buttons";
+@import "components/forms";
+@import "components/comments";
+@import "components/pagination";
+@import "components/social-icons";
+
+@import "pages/posts";
+@import "pages/search";
+
+@import "base/print";

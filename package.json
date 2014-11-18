@@ -1,0 +1,22 @@
+{
+  "name": "wp-starter",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-clean": "*",
+    "gulp-newer": "*",
+    "gulp-plumber": "*"
+  }
+}
