@@ -1,8 +1,6 @@
 jQuery(document).ready(function($) {
 
-  // ================
-  // ENABLE FASTCLICK
-  // ================
+// Enable Fastclick
 
   function FastClick() {
     //Polyfill to remove click delays on browsers with touch UIs.
@@ -12,4 +10,5 @@ jQuery(document).ready(function($) {
      }, false);
     }
   }
+
 });
