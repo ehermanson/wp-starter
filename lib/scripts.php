@@ -11,17 +11,11 @@ function erh_styles() {
 
 	global $fontURL;
 
-	wp_register_style( 'erh_css', get_template_directory_uri() . '/assets/build/css/style.css',array(), filemtime( get_template_directory().'/assets/build/css/style.css' ) );
-	wp_register_style( 'fonts', $fontURL );
+	wp_enqueue_style( 'erh-fonts', $fontURL );
+	wp_enqueue_style( 'erh-styles', get_template_directory_uri() . '/assets/build/css/style.css',array(), filemtime( get_template_directory().'/assets/build/css/style.css' ) );
 
-	wp_enqueue_style( 'erh_css' );
-	wp_enqueue_style( 'fonts' );
-
-	wp_register_script( 'erh-modernizr', get_template_directory_uri() . '/assets/build/js/modernizr.min.js', array('jquery'), null, false );
-	wp_register_script( 'erh_js', get_template_directory_uri() . '/assets/build/js/global.min.js', array('jquery'), null, true );
-
-	wp_enqueue_script( 'erh-modernizr' );
-	wp_enqueue_script( 'erh_js' );
+	wp_enqueue_script( 'erh-modernizr', get_template_directory_uri() . '/assets/build/js/modernizr.min.js', array('jquery'), null, false );
+	wp_enqueue_script( 'erh-js', get_template_directory_uri() . '/assets/build/js/global.min.js', array('jquery'), null, true );
 
 	/// LiveReload for local development
 	if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
