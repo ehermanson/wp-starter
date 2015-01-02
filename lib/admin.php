@@ -72,10 +72,10 @@ if( ! function_exists('erh_remove_wp_menu_items') ):
 
 	  // remove_menu_page( 'edit-comments.php' );          //Comments
 	  // remove_menu_page( 'edit.php' );								//Posts
-	 
-	  
+
+
 		// Menu Items to Hide to All Except $admins //
-	  $admins = array( 
+	  $admins = array(
 	      'ADMIN ACCOUNT'
 	  );
 
@@ -84,11 +84,11 @@ if( ! function_exists('erh_remove_wp_menu_items') ):
 	  if( !in_array( $current_user->user_login, $admins ) ) {
 			// remove_menu_page( 'themes.php' );                          // Appearance
 			// remove_menu_page( 'plugins.php' );                         // Plugins
-	    // remove_menu_page( 'edit.php?post_type=acf-field-group' );  // ACF 
+	    // remove_menu_page( 'edit.php?post_type=acf-field-group' );  // ACF
 	  }
-	 
+
 	}
-	 
+
 	add_action( 'admin_menu', 'erh_remove_wp_menu_items', 999 );
 
 endif;
@@ -123,7 +123,7 @@ function erh_custom_admin_menu( $menu_ord ) {
 // add_filter( 'custom_menu_order', 'erh_custom_admin_menu' );
 // add_filter( 'menu_order', 'erh_custom_admin_menu' );
 
-endif; 
+endif;
 
 /***************************************************************
 * Function erh_admin_branding
@@ -131,9 +131,10 @@ endif;
 ***************************************************************/
 
 function erh_admin_branding () {
-  echo 'Created by <a href="http://ericrhermanson.com">Eric Hermanson</a>. Powered by <a href="http://www.wordpress.org">WordPress</a>';
+  echo '<div class="logo-icon" style="display:inline-block;"><img style="width:35px; height:35px; margin-bottom:-12px; margin-right:5px;" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBmaWxsPSIjNzc3IiBwb2ludHM9IjEzLDI4LjcyOCA1MCw3LjQ1NiA4NywyOC43MjggODcsNzEuMjcxIDUwLDkyLjU0NSAxMyw3MS4yNzEgIi8+CiAgICAgICAgICA8ZyBpZD0iRSI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik02OS4yNzEsMjkuMjh2OC4yNEg0Mi4wNjV2OC41MzdoMjQuNDY5djcuODg0SDQyLjA2NXY4LjU5OUg3MC4xM3Y4LjE4SDI5Ljg3VjI5LjI4SDY5LjI3MXoiLz4KICAgICAgICAgIDwvZz4KICAgICAgICA8L3N2Zz4=">
+  </div>Developed by <a href="http://ericrhermanson.com">Eric Hermanson</a>. Powered by <a href="http://www.wordpress.org">WordPress</a>';
 }
- 
+
 add_filter('admin_footer_text', 'erh_admin_branding');
 
 /***************************************************************
