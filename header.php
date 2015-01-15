@@ -3,14 +3,11 @@
 <head>
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <title><?php wp_title( '|', true, 'right' ); ?></title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
   <?php
-  if ( is_single() ) { 
-    wp_enqueue_script( 'comment-reply' ); 
+  if ( is_single() ) {
+    wp_enqueue_script( 'comment-reply' );
   }
   ?>
 
@@ -25,7 +22,6 @@
 
 <header class="site-header" role="banner">
   <div class="block">
-    
     <div class="navbar">
       <a class="logo" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     </div>
