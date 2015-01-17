@@ -8,11 +8,11 @@
 if( ! function_exists('erh_pagenav') ):
 
 	function erh_pagenav() {
-		  global $wp_query, $wp_rewrite;
-		  $pages = '';
-		  $max = $wp_query->max_num_pages;
-		  if(!$current = get_query_var('paged')) $current = 1;
-		  $base = str_replace(999999999, '%#%', get_pagenum_link(999999999));
+			global $wp_query, $wp_rewrite;
+			$pages = '';
+			$max = $wp_query->max_num_pages;
+			if(!$current = get_query_var('paged')) $current = 1;
+			$base = str_replace(999999999, '%#%', get_pagenum_link(999999999));
 
 		 $total = 1;
 
@@ -26,7 +26,7 @@ if( ! function_exists('erh_pagenav') ):
 				'next_text'    => 'Next &raquo;'
 			);
 
-		  if($max > 1) echo '<div class="page-nav">';
+			if($max > 1) echo '<div class="page-nav">';
 				echo $pages . paginate_links($args);
 			if($max > 1) echo '</div>';
 	}
@@ -43,27 +43,27 @@ if( ! function_exists('erh_trim_excerpt') ):
 		$raw_excerpt = $text;
 			if ( '' == $text ) {
 
-		    $text = get_the_content('');
-		 	 	$text = strip_shortcodes( $text );
-		    $text = apply_filters('the_content', $text);
-		    // $text = str_replace(']]>', ']]>', $text);
-	     //  $text = strip_tags($text, '<em><strong><p>');
+				$text = get_the_content('');
+				$text = strip_shortcodes( $text );
+				$text = apply_filters('the_content', $text);
+				// $text = str_replace(']]>', ']]>', $text);
+			 //  $text = strip_tags($text, '<em><strong><p>');
 
-		    // Set the excerpt length
-		    $excerpt_length = apply_filters('excerpt_length', 150);
+				// Set the excerpt length
+				$excerpt_length = apply_filters('excerpt_length', 150);
 
-		    // Set what appears at the end of the excerpt
-		    $excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+				// Set what appears at the end of the excerpt
+				$excerpt_more = apply_filters('excerpt_more', ' ' . '...');
 
-		    $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
-		    if ( count($words) > $excerpt_length ) {
-		        array_pop($words);
-		        $text = implode(' ', $words);
-		        $text = $text . $excerpt_more;
+				$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+				if ( count($words) > $excerpt_length ) {
+						array_pop($words);
+						$text = implode(' ', $words);
+						$text = $text . $excerpt_more;
 						$text = force_balance_tags( $text );
-		    } else {
-		        $text = implode(' ', $words);
-		    }
+				} else {
+						$text = implode(' ', $words);
+				}
 
 		}
 

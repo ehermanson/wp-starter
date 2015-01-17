@@ -15,9 +15,7 @@
 			</article>
 
 		<?php endif; ?>
-
-	<?php erh_pagenav(); ?>
-
+	<?php the_posts_pagination(); ?>
 	</section>
 
 <?php get_sidebar(); ?>

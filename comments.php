@@ -4,15 +4,15 @@
  */
 ?>
 
-<?php 
+<?php
 
   if ( post_password_required() )
     return;
 
 ?>
- 
+
 <div id="comments" class="comments-area">
- 
+
   <?php if ( have_comments() ) : ?>
     <h3 class="comments-title">
      <?php printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'erh_starter' ),
@@ -38,10 +38,10 @@
   <?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
     <p class="nocomments"><?php _e( 'Comments are closed.', 'erh_starter' ); ?></p>
-    
+
   <?php endif; ?>
 
-  <?php 
+  <?php
 
     $args = array(
       'title_reply'       => __( 'Leave a Comment', 'erh_starter' ),
@@ -55,7 +55,7 @@
       '</p>',
     );
 
-    comment_form($args); 
+    comment_form($args);
 
   ?>
 

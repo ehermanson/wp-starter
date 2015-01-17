@@ -1,5 +1,4 @@
-		
-	</div> 
+	</div>
 
 		<footer>
 			<div class="block">
@@ -9,10 +8,6 @@
 				</div>
 			</div>
 		</footer>
-
-
-
-  <?php wp_footer(); ?>
-
+	<?php wp_footer(); ?>
 </body>
 </html>

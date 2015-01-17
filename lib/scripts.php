@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $fontURL = 'http://fonts.googleapis.com/css?family=Open+Sans:300,400';
 
@@ -22,9 +22,9 @@ function erh_styles() {
 	  wp_register_script('livereload', 'http://localhost:8888/livereload.js?snipver=1', null, false, true);
 	  wp_enqueue_script('livereload');
 	}
-	
+
 }
-	
+
 add_action( 'wp_enqueue_scripts', 'erh_styles' );
 
 /***************************************************************
@@ -55,12 +55,12 @@ function erh_login_css() {
 	wp_enqueue_style( 'erh_login_css', get_template_directory_uri() . '/assets/build/css/login.css', false );
 }
 
-function erh_login_url() {  
-	return home_url(); 
+function erh_login_url() {
+	return home_url();
 }
 
-function erh_login_title() { 
-	return get_option( 'blogname' ); 
+function erh_login_title() {
+	return get_option( 'blogname' );
 }
 
 add_action( 'login_enqueue_scripts', 'erh_login_css', 10 );
@@ -85,7 +85,7 @@ add_editor_style( 'editor-style.css' );
 
 /***************************************************************
 * Function erh_dequeue_jquery_migrate
-* Remove jQuery Migrate 
+* Remove jQuery Migrate
 ***************************************************************/
 
 add_filter( 'wp_default_scripts', 'erh_dequeue_jquery_migrate' );

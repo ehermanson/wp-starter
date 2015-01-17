@@ -8,13 +8,12 @@ require_once('post-types/slider.php');
 ***************************************************************/
 
 function erh_change_title_text( $title ){
-     $screen = get_current_screen();
- 
-     if ( 'homepage_slider' == $screen->post_type ) {
-          $title = 'Enter Title for the Image';
-     }
- 
-     return $title;
+	$screen = get_current_screen();
+	if ( 'homepage_slider' == $screen->post_type ) {
+		$title = 'Enter Title for the Image';
+	}
+
+	return $title;
 }
- 
+
 add_filter( 'enter_title_here', 'erh_change_title_text' );

@@ -25,5 +25,5 @@
 	<footer>
 		<?php get_template_part( 'templates/entry', 'social' ); ?>
 	</footer>
-	
+
 </article>
