@@ -76,11 +76,68 @@ if( ! function_exists('erh_trim_excerpt') ):
 endif;
 
 /***************************************************************
+* Function erh_auto_featured_image
+* Set the Featured Image automatically if user doesn't set it
+***************************************************************/
+if( ! function_exists('erh_auto_featured_image') ):
+
+	function erh_auto_featured_image() {
+		global $post;
+		$already_has_thumb = has_post_thumbnail($post->ID);
+		if (!$already_has_thumb) {
+			$attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
+			if ($attached_image) {
+				foreach ($attached_image as $attachment_id => $attachment) {
+					set_post_thumbnail($post->ID, $attachment_id);
+				}
+			}
+		}
+	}
+
+	add_action('the_post', 'erh_auto_featured_image');
+	add_action('save_post', 'erh_auto_featured_image');
+	add_action('draft_to_publish', 'erh_auto_featured_image');
+	add_action('new_to_publish', 'erh_auto_featured_image');
+	add_action('pending_to_publish', 'erh_auto_featured_image');
+	add_action('future_to_publish', 'erh_auto_featured_image');
+
+endif;
+
+/***************************************************************
+* Function erh_featured_image
+* Display Featured Image
+***************************************************************/
+if( ! function_exists('erh_featured_image') ):
+
+function erh_featured_image() {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+
+	if ( is_singular() ) :
+	?>
+
+	<div class="featured-image">
+		<?php the_post_thumbnail(); ?>
+	</div><!-- .post-thumbnail -->
+
+	<?php else : ?>
+
+	<a class="featured-image" href="<?php the_permalink(); ?>" aria-hidden="true">
+		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) ); ?>
+	</a>
+
+	<?php endif; // End is_singular()
+}
+
+endif;
+
+/***************************************************************
 * Function erh_no_image_link
 * Remove default links added to images
 ***************************************************************/
 if( ! function_exists('erh_no_image_link') ):
-	
+
 	function erh_no_image_link() {
 		$image_set = get_option( 'image_default_link_type' );
 		if ( $image_set !== 'none' ) {
@@ -91,6 +148,7 @@ if( ! function_exists('erh_no_image_link') ):
 	add_action( 'admin_init', 'erh_no_image_link', 10 );
 
 endif;
+
 /***************************************************************
 * Function erh_read_more
 * Custom Read More function
@@ -105,6 +163,7 @@ if( ! function_exists('erh_read_more') ):
 	add_filter('excerpt_more', 'erh_read_more');
 
 endif;
+
 /***************************************************************
 * Function erh_post_count_on_archive
 * Set Custom Number of Results for Search/Archive pages
