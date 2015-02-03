@@ -74,8 +74,8 @@
 		border-color: $color transparent transparent transparent;
 		border-style: solid;
 		border-width: $size;
-		height:0;
-		width:0;
+		height: 0;
+		width: 0;
 	}
 	@if($direction == left) {
 		border-color: transparent $color transparent transparent;
@@ -88,8 +88,8 @@
 		border-color: transparent transparent transparent $color;
 		border-style: solid;
 		border-width: $size 0 $size $size;
-		height:0;
-		width:0;
+		height: 0;
+		width: 0;
 	}
 }
 

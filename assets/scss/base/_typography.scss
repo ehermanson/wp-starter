@@ -4,12 +4,12 @@ body {
   line-height: $line-height;
   color: $text-color;
   background-color: $body-color;
-  font-weight:$weight-normal;
+  font-weight: $weight-normal;
   @include bp(sm){
-    font-size:17px;
+    font-size: 17px;
   }
   @include bp(md){
-    font-size:18px;
+    font-size: 18px;
   }
 }
 
@@ -19,29 +19,29 @@ p {
 
 
 a {
-  color:$link-color;
+  color: $link-color;
   transition: $transition-slow;
-  text-decoration:none;
-  &:hover, 
+  text-decoration: none;
+  &:hover,
   &:focus {
-    color:$link-hover;
+    color: $link-hover;
     // text-decoration:none;
   }
 }
 
 a:focus {
-  outline:0;
+  outline: 0;
 }
 
 ::-moz-selection {
   background: $main;
-  color:$white;
+  color: $white;
   text-shadow: none;
 }
 
 ::selection {
   background: $main;
-  color:$white;
+  color: $white;
   text-shadow: none;
 }
 

@@ -17,8 +17,8 @@ video {
 }
 
 img {
-  max-width:100%;
-  height:auto;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -29,28 +29,27 @@ fieldset {
 }
 
 svg:not(:root) {
-  overflow:visible;
+  overflow: visible;
 }
-
 
 // WP Specific
 // ------------------
 
 .full-post .wp-caption img {
-  margin-bottom:0;
-} 
+  margin-bottom: 0;
+}
 
 .wp-caption {
-  background:$gray-lighter;
-  margin-bottom:2em;
+  background: $gray-lighter;
+  margin-bottom: 2em;
 }
 
 .wp-caption-text {
   color: $gray;
-  margin:0;
-  padding:10px;
+  margin: 0;
+  padding: 10px;
 }
 
 .gallery-caption {
-  background:$gray-lighter;
+  background: $gray-lighter;
 }

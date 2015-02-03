@@ -1,39 +1,37 @@
 .site-header {
-	background:$gray-lighter;
+  background: $gray-lighter;
 }
 
 .logo {
-	font-size:2em;
+  font-size: 2em;
 }
 
 // Primary Navigation
 
 .navigation {
-	list-style:none;
-	margin:0;
-	padding:0;
-	@include clearfix;
-} 
-
-.menu-item {
-	float:left;
-	padding:10px;
-	margin-right:20px;
-	
-	&:last-child {
-		margin-right:0;
-	}
-	
-	&.active {
-		background:rgba($gray,.25);
-		a {
-			color:$white;
-		}
-	}
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include clearfix;
 }
 
+.menu-item {
+  float: left;
+  padding: 10px;
+  margin-right: 20px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    background: rgba($gray,.25);
+    a {
+      color: $white;
+    }
+  }
+}
 
 .dropdown-menu {
-	display:none;
+  display: none;
 }

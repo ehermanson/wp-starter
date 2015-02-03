@@ -17,12 +17,6 @@ function erh_styles() {
 	wp_enqueue_script( 'erh-modernizr', get_template_directory_uri() . '/assets/build/js/modernizr.min.js', array('jquery'), null, false );
 	wp_enqueue_script( 'erh-js', get_template_directory_uri() . '/assets/build/js/global.min.js', array('jquery'), null, true );
 
-	/// LiveReload for local development
-	if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-	  wp_register_script('livereload', 'http://localhost:8888/livereload.js?snipver=1', null, false, true);
-	  wp_enqueue_script('livereload');
-	}
-
 }
 
 add_action( 'wp_enqueue_scripts', 'erh_styles' );

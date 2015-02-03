@@ -1,39 +1,39 @@
 <?php get_header(); ?>
 
-	<section class="main archive-content" role="main">
+  <section class="main archive-content" role="main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-			<?php the_archive_title( '<h1>', '</h1>' );
-			the_archive_description( '<div class="archive-tax-description">', '</div>' ); ?>
+      <?php the_archive_title( '<h1>', '</h1>' );
+      the_archive_description( '<div class="archive-tax-description">', '</div>' ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-				<article <?php post_class() ?>>
+        <article <?php post_class() ?>>
 
-					<header>
-						<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+          <header>
+            <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-						<?php get_template_part( 'templates/entry', 'meta' ); ?>
-					</header>
+            <?php get_template_part( 'templates/entry', 'meta' ); ?>
+          </header>
 
-					<div class="entry">
-						<?php the_content(); ?>
-					</div>
+          <div class="entry">
+            <?php the_content(); ?>
+          </div>
 
-				</article>
+        </article>
 
-			<?php endwhile; ?>
+      <?php endwhile; ?>
 
-			<?php get_template_part( 'templates/page', 'nav' ); ?>
+      <?php get_template_part( 'templates/page', 'nav' ); ?>
 
-	<?php else : ?>
+  <?php else : ?>
 
-		<h1>Nothing found</h1>
+    <h1>Nothing found</h1>
 
-	<?php endif; ?>
+  <?php endif; ?>
 
-	</section>
+  </section>
 
 <?php get_sidebar(); ?>
 

@@ -9,19 +9,19 @@ $susy: (
 //==============================================================
 
 // Brand/Main Colors
-$main: #00aaef;
-$main-dark:darken($main,10%);
-$main-light:lighten($main,10%);
+$main: #008ab0;
+$main-dark: darken($main,10%);
+$main-light: lighten($main,10%);
 $alternate: #5cb85c;
 $white: #ffffff;
 
 // Shades of Gray
-$gray-darker:           lighten(#000, 13.5%);
-$gray-dark:             lighten(#000, 20%);  
-$gray:                  lighten(#000, 33.5%);
-$gray-light:            lighten(#000, 60%);  
-$gray-lighter:          lighten(#000, 93.5%);
-$gray-lightest:         lighten(#000, 97%);
+$gray-darker: lighten(#000, 13.5%);
+$gray-dark: lighten(#000, 20%);
+$gray: lighten(#000, 33.5%);
+$gray-light: lighten(#000, 60%);
+$gray-lighter: lighten(#000, 93.5%);
+$gray-lightest: lighten(#000, 97%);
 
 // Social Network Colors
 $facebook: #3b5998;
@@ -62,7 +62,7 @@ $transition-fast: all .2s ease;
 $transition-slow: all 1.0s ease;
 
 $body-color: $white;
-$spacing-unit:40px;
+$spacing-unit: 40px;
 
 // Conditionals
 $flexbox: true;

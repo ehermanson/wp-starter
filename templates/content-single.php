@@ -6,24 +6,24 @@
 
 <article <?php post_class('full-post'); ?> id="post-<?php the_ID(); ?>">
 
-	<header>
-		<h1><?php the_title(); ?></h1>
+  <header>
+    <h1><?php the_title(); ?></h1>
 
-		<?php get_template_part( 'templates/entry', 'meta' ); ?>
-	</header>
+    <?php get_template_part( 'templates/entry', 'meta' ); ?>
+  </header>
 
-	<div class="post-content">
+  <div class="post-content">
 
-		<?php the_content(); ?>
+    <?php the_content(); ?>
 
-		<?php wp_link_pages( array( 'before' => 'Pages: ', 'next_or_number' => 'number' ) ); ?>
+    <?php wp_link_pages( array( 'before' => 'Pages: ', 'next_or_number' => 'number' ) ); ?>
 
-		<?php the_tags( 'Tags: ', ', ', ''); ?>
+    <?php the_tags( 'Tags: ', ', ', ''); ?>
 
-	</div>
+  </div>
 
-	<footer>
-		<?php get_template_part( 'templates/entry', 'social' ); ?>
-	</footer>
+  <footer>
+    <?php get_template_part( 'templates/entry', 'social' ); ?>
+  </footer>
 
 </article>

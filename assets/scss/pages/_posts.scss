@@ -1,60 +1,59 @@
-
 // Post Excerpts
 //==============================================================
 
 .post-excerpt {
-	margin-bottom:$spacing-unit;
+  margin-bottom: $spacing-unit;
 }
 
 .entry-title a {
-	color:$text-color;
-	&:hover {
-		color:$main;
-	}
+  color: $text-color;
+  &:hover {
+    color: $main;
+  }
 }
 
 .excerpt-read-more {
-	margin-bottom:.5em;
+  margin-bottom: .5em;
 }
 
 .featured-image {
-	margin-bottom:1em;
-	text-align:center;
-	min-height:150px;
-	img {
-		margin:0 auto;
-	}
+  margin-bottom: 1em;
+  text-align: center;
+  min-height: 150px;
+  img {
+    margin: 0 auto;
+  }
 }
 
 .sticky {
-	background-color:$gray-lightest;
-	padding:10px;
+  background-color: $gray-lightest;
+  padding: 10px;
 }
 
 // Full Posts
 //==============================================================
 
 .full-post {
-	img {
-	  max-width: 100%;
-	  height:auto;
-  	display:block;
-		margin:0 auto 2em;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 2em;
   }
   img[class*="align"],
-	img[class*="wp-image-"] {
+  img[class*="wp-image-"] {
     height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
-	}
-	img.size-full, img.size-large {
-    width:100%;
-	}
-	img.wp-smiley { // get rid of the smileys in posts
-		margin:0;
-		width:auto;
-		&+span {
-			display:none;
-		}
-	}
+  }
+  img.size-full, img.size-large {
+    width: 100%;
+  }
+  img.wp-smiley { // get rid of the smileys in posts
+    margin: 0;
+    width: auto;
+    &+span {
+      display: none;
+    }
+  }
 }
 
 // Posts General
@@ -62,53 +61,53 @@
 
 .post {
 
-	.entry-content {
-		> * {
-			max-width:100%;
-		}
-	}
+  .entry-content {
+    > * {
+      max-width: 100%;
+    }
+  }
 
-	.post-meta {
-		color:$gray-light;
-		display:block;
-		border-bottom:1px solid $gray-lighter;
-		padding:.5em 0;
-		margin-bottom:$spacing-unit/2;
-		font-size:.8em;
-	}
+  .post-meta {
+    color: $gray-light;
+    display: block;
+    border-bottom: 1px solid $gray-lighter;
+    padding: .5em 0;
+    margin-bottom: $spacing-unit/2;
+    font-size: .8em;
+  }
 
-	.published {
-		text-transform:uppercase;
-		font-weight:bold;
-		display:inline-block;
-	}
-	
-	.post-tags {
-		i {
-			color:$main-light;
-			font-size:1.5em;
-			float:left;
-			margin:0 .5em .5em 0;
-		}
-		a {
-			font-size:.75em;
-			background-color:$main-light;
-			border-radius:3px;
-			color:$main;
-			padding:2px 6px;
-			white-space:nowrap;
-			&:hover {
-				background-color:$main;
-				color:$white;
-			}
-		}
-	}
+  .published {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+  }
 
-	.post-footer {
-		margin:1em 0;
-		padding:1em;
-		border-top:1px solid $gray-lighter;
-		border-bottom:1px solid $gray-lighter;
-	}
+  .post-tags {
+    i {
+      color: $main-light;
+      font-size: 1.5em;
+      float: left;
+      margin: 0 .5em .5em 0;
+    }
+    a {
+      font-size: .75em;
+      background-color: $main-light;
+      border-radius: 3px;
+      color: $main;
+      padding: 2px 6px;
+      white-space: nowrap;
+      &:hover {
+        background-color: $main;
+        color: $white;
+      }
+    }
+  }
+
+  .post-footer {
+    margin: 1em 0;
+    padding: 1em;
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+  }
 
 }

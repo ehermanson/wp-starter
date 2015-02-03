@@ -2,36 +2,35 @@
 //==============================================================
 
 .page-nav {
-	margin-bottom:2em;
-	@include clearfix;
-	@include bp(sm){
-		margin-bottom:0;
-	} 
-	.page-numbers {
-		display:block;
-		text-align:center;
-		float:left;
-		background-color:$gray-lighter;
-		width:2em;
-		height:2em;
-		line-height:2;
-		border-radius:50%;
-		margin-right:.5em;
-		margin-bottom:1em;
-	}
-	.page-numbers.dots {
-		background:0;
-		font-weight:600;
-	}
-	.page-numbers.current, a.page-numbers:hover {
-		background-color:$main;
-		color:$white;
-	}
-	.next.page-numbers, .prev.page-numbers {
-		border-radius:4px;
-		width:auto;
-		padding:0 10px;
-	}
+  margin-bottom: 2em;
+  @include clearfix;
+  @include bp(sm){
+    margin-bottom: 0;
+  }
+  .page-numbers {
+    display: block;
+    text-align: center;
+    float: left;
+    background-color: $gray-lighter;
+    width: 2em;
+    height: 2em;
+    line-height: 2;
+    border-radius: 50%;
+    margin-right: .5em;
+    margin-bottom: 1em;
+  }
+  .page-numbers.dots {
+    background: 0;
+  }
+  .page-numbers.current, a.page-numbers:hover {
+    background-color: $main;
+    color: $white;
+  }
+  .next.page-numbers, .prev.page-numbers {
+    border-radius: 4px;
+    width: auto;
+    padding: 0 10px;
+  }
 }
 .next-posts { float: left; }
 .prev-posts { float: right; }
